@@ -145,7 +145,7 @@ def display_response(response):
     with use_scope('response_area'):
         put_table([
             [put_text("Assistant: ").style("color: #202060; font-size:16px"), response]
-            ])
+        ])
 
 
 def main():
@@ -167,7 +167,6 @@ def main():
     # Determine file type to pass to text converter
     file_type = user_info['cv']['filename'].split('.')[-1].lower()
     cv_content = convert_to_text(user_info['cv']['content'], file_type)
-
     # Retrieve selected vacancy to gather information and requirements
     selected_vacancy = next((vacancy for vacancy in vacancies_data if vacancy["name"] == user_info['vacancy']), None)
     if not selected_vacancy:
@@ -189,7 +188,7 @@ def main():
                   f"{vacancy_details}\n\n")
     # Create the first query and send user information with the cv content and vacancy details
     # then display the response
-    query = f"Analyze the CV for the position of {user_info['vacancy']}:\n{cv_content}\n\n{vacancy_details}"
+    query = f"This is the CV Content: \n{cv_content}\n\nRead the CV for the position of {user_info['vacancy']}:\n\n{vacancy_details}"
     # Create a dedicated output area for responses
     with put_loading():
         put_text("Analyzing your information, please wait...")
@@ -207,13 +206,19 @@ def main():
         with put_loading():
             put_text("Analyzing your answer, please wait...")
             response = chat_with_gpt(user_answer)
-        if "Based on the analysis" in response:
+        # Get the keywords of the last response the finalize the dialog
+        if "Based on my analysis" in response:
             final_response_received = True
-            display_response(response)
+            # display_response(response)
             dialog.append(f"Assistant: {response}")
             time.sleep(5)
+            put_text("Thank you for providing your responses. Your answers have been noted.\n "
+                     f"If there is anything else you would like to add or ask, feel free to let me know. \n"
+                     f"Good luck with your job search and the application process!")
             # Create a popup (optional)
-            popup("Thank You", f"{response}\n\nThank you for your interest in our company. We will get back to you soon.\n\nThis window will close itself and the browser tab if no action taken. Have a nice day!")
+            popup("Thank You", f"Thank you for providing your responses. Your answers have been noted.\n "
+                               f"If there is anything else you would like to add or ask, feel free to let me know. \n"
+                               f"Good luck with your job search and the application process!")
             # Close the window after 10 seconds
             run_js('setTimeout(() => window.close(), 20000)')
         else:
@@ -227,9 +232,7 @@ def main():
         os.makedirs(folder_path)
     with open(f'dialogs/{thread_id}/dialog.txt', 'w') as dialog_file:
         dialog_file.write(full_dialog)
-    
-    
-    
+
     # Save it for email sending setup
     """subject = "New ChatGPT Job Application Dialog"
     # Replace with the admins' email address
