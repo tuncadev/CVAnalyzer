@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Lead Generation Manager / SDR Manager",
+    "suitability" : "100%",
+    "description" : [
+      {
+        "affect" : "70%",
+        "requirements": [
+          "Experience in B2B sales or Lead Generation or SDR Manager for 2 years",
+          "Advanced level of English",
+          "Excellent negotiation skills",
+          "Excellent written and verbal communication skills",
+          "Understanding of enterprise buying processes",
+          "Experience with CRM tools like Pipedrive",
+          "Experience with sales automation tools like Snov.io, and Sales Navigator."
+        ]
+      }
+    ],
+    "would_be_plus" : [
+      {
+        "affect" : "30%",
+        "details" : [
+          "Experience in managing complex sales processes that require multiple touches through different channels (LinkedIn, email);",
+          "Understanding PM processes;",
+          "Our customers are tech and engineering companies of 100+ employees in the US and European markets, so having a sales experience with a similar ICP would be a big plus.\n"
+        ]
+      }
+    ],
+    "notes" : "If some information regarding these requirements is missing in CV, Chatbot should ask a candidate and add this information to a new CV result file."
+  },
+    {
+    "name": "Middle React Native developer",
+    "suitability" : "100%",
+    "description" : [
+      {
+        "affect" : "70%",
+        "requirements": [
+          "3+ years of experience in React Native, CSS, HTML, and TypeScript development",
+          "Comprehensive understanding and practical application of Redux architecture",
+          "Solid knowledge of JavaScript",
+          "Good understanding of React Context and adept at utilizing it in development",
+          "Expertise in developing cross-platform applications from scratch",
+          "Competent use of React Hooks",
+          "Ability to collaborate within a team of developers and implement features based on project requirements",
+          "Good experience in developing and launching applications for iOS and Android.",
+          "Upper-intermediate level of English proficiency, ready to pass interviews in English.",
+          "Located in Ukraine"
+        ]
+      }
+    ],
+    "would_be_plus" : [
+      {
+        "affect" : "30%",
+        "details" : [
+          "Familiarity with native module development in React Native for platform-specific optimizations",
+          "Experience with continuous integration and continuous deployment (CI/CD) pipelines",
+          "Familiarity with GraphQL for data querying and manipulation",
+          "Bachelor`s degree in Computer Science or Math.\n"
+        ]
+      }
+    ],
+    "notes" : "If some information regarding these requirements is missing in CV, Chatbot should ask a candidate and add this information to a new CV result file."
+  }
+]

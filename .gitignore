@@ -1,0 +1,33 @@
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore virtual environment
+venv/
+env/
+*.env
+!example.env
+
+# Ignore local development settings
+*.sqlite3
+*.pyc
+
+# Ignore dependencies installed by pip
+# Include any additional dependencies you might have
+# (e.g., specific Python packages, OS-specific packages)
+*.egg-info/
+*.egg
+
+# Ignore any files related to IDE or editor settings
+.idea/
+.vscode/
+
+# Ignore files related to CrewAI, OpenAI, and PyWebIO
+# You might need to adjust this based on your project structure
+crewai-agent/
+.openai/
+pywebio-agent/
+
+# Ignore any log files or temporary files
+*.log
+*.swp
+*~
