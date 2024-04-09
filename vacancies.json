@@ -1,7 +1,7 @@
 [
   {
     "name": "Lead Generation Manager / SDR Manager",
-    "suitability" : "100%",
+    "suitability_needed" : "100%",
     "description" : [
       {
         "affect" : "70%",
@@ -30,7 +30,7 @@
   },
     {
     "name": "Middle React Native developer",
-    "suitability" : "100%",
+    "suitability_needed" : "100%",
     "description" : [
       {
         "affect" : "70%",
